@@ -1,0 +1,23 @@
+stages:
+  - build
+
+variables:
+  # Using docker:dind requires TLS by default in newer versions
+  DOCKER_TLS_CERTDIR: "/certs"
+
+build-and-push-docker:
+  stage: build
+  image: docker:24.0.5
+  services:
+    - docker:24.0.5-dind
+  before_script:
+    # Requires DOCKERHUB_USERNAME and DOCKERHUB_PASSWORD to be set in GitLab CI/CD Settings
+    - echo "$DOCKERHUB_PASSWORD" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
+  script:
+    - echo "Building Docker image..."
+    - docker build -t faiznrd/pui-honeypot:latest .
+    - echo "Pushing to Docker Hub..."
+    - docker push faiznrd/pui-honeypot:latest
+  rules:
+    # Only run the build pipeline when pushing to the master or main branch
+    - if: '$CI_COMMIT_BRANCH == "master" || $CI_COMMIT_BRANCH == "main"'

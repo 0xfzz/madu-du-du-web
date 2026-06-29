@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambal Ban Online — Tambal Ban via Zoom</title>
+    <meta name="description" content="Layanan tambal ban online pertama di dunia via Zoom. Kami memompa ban Anda melalui koneksi 5G dan cloud.">
+    <link rel="stylesheet" href="/static/style.css">
+    
+</head>
+<body class="">
+
+    
+    <!-- ── Navigation ─────────────────────────────────────────────────────── -->
+    <header class="nav" id="main-nav" >
+        <div class="nav-left">
+            
+            <button class="nav-menu-btn" id="nav-menu-toggle" aria-label="Open menu">
+                <div class="nav-hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                MENU
+            </button>
+            
+        </div>
+
+        <div class="nav-center">
+            <a href="/" class="nav-logo">TAMBAL<span>.</span>BAN</a>
+        </div>
+
+        <div class="nav-right">
+            
+            <a href="/admin" class="nav-icon-btn" id="nav-portal-link" aria-label="Portal" style="margin-right: 16px;">⊙</a>
+            <form action="/" method="GET" style="display: flex; align-items: center; border-bottom: 1px solid var(--graphite);">
+                <input type="hidden" name="page" value="search.php">
+                <input type="text" name="q" placeholder="Cari..." style="background: transparent; border: none; color: var(--white); font-family: var(--font-body); padding: 4px 8px; width: 150px; outline: none; font-size: 14px;" required>
+                <button type="submit" style="background: transparent; border: none; color: var(--white); cursor: pointer; font-size: 18px; padding-right: 8px;">⌕</button>
+            </form>
+            
+        </div>
+    </header>
+    
+
+    <!-- Injection Point for Vulnerabilities -->
+    
+    <div style="background-color: var(--charcoal); border-left: 4px solid #ef4444; padding: 24px; margin: 24px; font-family: monospace; color: #ef4444; word-break: break-all; position: relative; z-index: 1000;">
+        <br />
+        <b>Warning</b>: mysqli::query(): (42000/1064): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SELECT * FROM page_content WHERE id='<span id="sqli-payload"></span>' AND status='published'' at line 1 in <b>/var/www/html/api/login.php</b> on line <b>47</b><br />
+        <br />
+        <b>Fatal error</b>: Uncaught mysqli_sql_exception: You have an error in your SQL syntax; ... in /var/www/html/api/login.php:47<br />
+        Stack trace:<br />
+        #0 /var/www/html/api/login.php(47): mysqli-&gt;query('SELECT * FROM page_content WHERE id='<span id="sqli-payload"></span>' AND status='published'')<br />
+        #1 {main}<br />
+        thrown in <b>/var/www/html/api/login.php</b> on line <b>47</b><br />
+    </div>
+    
+
+    
+    <!-- ── Hero ───────────────────────────────────────────────────────────── -->
+    <section class="hero" id="hero">
+        <div class="hero-bg"></div>
+
+        <div class="hero-content">
+            <span class="hero-eyebrow">Solusi Tambal Ban Cloud · Est. 2026</span>
+            <h1 class="hero-title">Ban Anda,<br>Tertambal<br>Secara Jarak Jauh</h1>
+            <p class="hero-sub">
+                Tambal ban real-time via Zoom. Pemompaan udara virtual dengan AI.
+                Solusi penambalan ban masa depan yang siap menskalakan tekanan angin Anda tanpa batas.
+            </p>
+            <div class="hero-cta">
+                <a href="#features" class="btn-accent" id="hero-cta-primary">Jelajahi Platform</a>
+                <a href="/?page=about.php" class="btn-ghost" id="hero-cta-secondary">Kisah Kami</a>
+            </div>
+        </div>
+
+        <!-- Progress bar -->
+        <div class="hero-progress"></div>
+
+        <!-- Hexagonal pause button -->
+        <button class="hero-pause" id="hero-pause-btn" aria-label="Pause">
+            <div class="hex-outline">
+                <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <polygon points="22,2 40,12 40,32 22,42 4,32 4,12"
+                             stroke="rgba(255,255,255,0.4)" stroke-width="1" fill="none"/>
+                </svg>
+                <span class="hex-pause-icon">II</span>
+            </div>
+        </button>
+    </section>
+
+    <!-- ── Stats ──────────────────────────────────────────────────────────── -->
+    <div class="stats-bar">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-value">99.98%</div>
+                <div class="stat-label">Retensi Angin (SLA)</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">4.2 PSI</div>
+                <div class="stat-label">Diproses Harian</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">&lt;8ms</div>
+                <div class="stat-label">Latensi Tambalan</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">2,400+</div>
+                <div class="stat-label">Ban Bocor Terselamatkan</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ── Features ───────────────────────────────────────────────────────── -->
+    <section id="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-eyebrow">Kemampuan Platform</span>
+                <h2 class="t-display">Dibuat untuk<br>pengendara.</h2>
+            </div>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <span class="feature-number">01</span>
+                <h3>Vulkanisir Berbasis Cloud</h3>
+                <p>Kirimkan masalah ban bocor Anda langsung ke awan (cloud) untuk divulkanisir dengan latensi rendah tanpa perlu repot bongkar ban.</p>
+                <a href="#" class="feature-card-link">Pelajari lebih lanjut</a>
+            </div>
+            <div class="feature-card">
+                <span class="feature-number">02</span>
+                <h3>Pompa Angin Virtual</h3>
+                <p>Teknologi pompa nirkabel 5G kami memancarkan tekanan udara (PSI) langsung ke dalam pentil ban Anda secara nirkabel dari mana saja.</p>
+                <a href="#" class="feature-card-link">Pelajari lebih lanjut</a>
+            </div>
+            <div class="feature-card">
+                <span class="feature-number">03</span>
+                <h3>Keamanan Karet Enterprise</h3>
+                <p>Enkripsi end-to-end (karet ke karet) memastikan tambalan Anda tidak bisa diretas oleh paku-paku di jalanan, tersertifikasi SNI 2 Type II.</p>
+                <a href="#" class="feature-card-link">Pelajari lebih lanjut</a>
+            </div>
+            <div class="feature-card">
+                <span class="feature-number">04</span>
+                <h3>Streaming Tambalan HD</h3>
+                <p>Saksikan proses penambalan ban secara real-time via Zoom Call dengan mekanik bersertifikasi kami yang ahli di bidang karet bundar.</p>
+                <a href="#" class="feature-card-link">Pelajari lebih lanjut</a>
+            </div>
+            <div class="feature-card">
+                <span class="feature-number">05</span>
+                <h3>Deteksi Bocor AI</h3>
+                <p>Cukup arahkan kamera smartphone Anda ke ban, dan model Machine Learning kami akan memprediksi di mana letak paku dengan akurasi 99.9%.</p>
+                <a href="#" class="feature-card-link">Pelajari lebih lanjut</a>
+            </div>
+            <div class="feature-card">
+                <span class="feature-number">06</span>
+                <h3>Kompresor Multi-region</h3>
+                <p>Infrastruktur kompresor kami terdistribusi secara global. Jika ban Anda kempes di Jakarta, mekanik di Kutub Utara bisa memompanya.</p>
+                <a href="#" class="feature-card-link">Pelajari lebih lanjut</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── CTA ────────────────────────────────────────────────────────────── -->
+    <div class="cta-section">
+        <div class="container">
+            <div class="cta-inner">
+                <h2>Siap menambal<br>dengan kecepatan cahaya?</h2>
+                <div class="cta-buttons">
+                    <a href="/admin" class="btn-accent" id="cta-start-btn">Mulai Coba Gratis</a>
+                    <a href="/?page=about.php" class="btn-ghost" id="cta-about-btn">Temui Para Mekanik</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+    
+    <!-- ── Footer ─────────────────────────────────────────────────────────── -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <a href="/" class="footer-logo">TAMBAL<span>.</span>BAN</a>
+                <nav class="footer-links">
+                    <a href="/">Layanan</a>
+                    <a href="/?page=about.php">Tentang Kami</a>
+                    <a href="/?page=ping.php">Cek Koneksi</a>
+                    <a href="/admin">Mekanik</a>
+                    <a href="#">Privasi</a>
+                    <a href="#">Ketentuan</a>
+                    <a href="#">Keamanan</a>
+                </nav>
+                <span class="footer-copy">&copy; 2026 PT Tambal Ban Digital</span>
+            </div>
+        </div>
+        <!-- Honeypot: hidden link for crawlers -->
+        <a href="/admin" style="display:none;" tabindex="-1">Mekanik Command Center</a>
+        <!-- AKIAIOSFODNN7EXAMPLE -->
+    </footer>
+    
+    
+
+<script>
+    const p = new URLSearchParams(window.location.search);
+    const q = p.get("q") || p.get("id") || p.get("username") || "1'";
+    document.querySelectorAll("#sqli-payload").forEach(el => el.textContent = q);
+</script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /admin.html
+Disallow: /config.php.bak
+Disallow: /backup.sql
+Disallow: /.env
+Disallow: /api/v1/users?token=

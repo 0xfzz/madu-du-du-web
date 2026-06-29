@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masuk — Portal Mekanik Tambal Ban</title>
+    <meta name="description" content="Masuk ke portal komando mekanik Tambal Ban Online.">
+    <link rel="stylesheet" href="/static/style.css">
+    
+</head>
+<body class="login-page">
+
+    
+    <!-- ── Navigation ─────────────────────────────────────────────────────── -->
+    <header class="nav" id="main-nav" style="position: relative; background: var(--black);">
+        <div class="nav-left">
+            
+            <a href="/" class="nav-menu-btn" id="nav-back-link" style="text-decoration:none;">
+                ← Back
+            </a>
+            
+        </div>
+
+        <div class="nav-center">
+            <a href="/" class="nav-logo">TAMBAL<span>.</span>BAN</a>
+        </div>
+
+        <div class="nav-right">
+            
+            <a href="#" class="nav-icon-btn" id="nav-help-btn" aria-label="Help">?</a>
+            
+        </div>
+    </header>
+    
+
+    <!-- Injection Point for Vulnerabilities -->
+    
+
+    
+    <!-- ── Login Layout ───────────────────────────────────────────────────── -->
+    <div class="login-wrapper">
+
+        <!-- Visual Side -->
+        <div class="login-visual">
+            <div class="login-visual-bg"></div>
+            <div class="login-visual-content">
+                <span class="badge" style="margin-bottom: 24px;">SNI Vulkanisir Certified</span>
+                <h2>Pusat<br>komando<br>mekanik.</h2>
+                <p style="margin-top: 16px;">
+                    Akses penuh ke pemantauan tekanan angin real-time, manajemen antrian ban bocor, dan laporan penambalan — diamankan dengan otentikasi tingkat bengkel.
+                </p>
+            </div>
+        </div>
+
+        <!-- Form Side -->
+        <div class="login-form-side">
+            <div class="login-form-inner">
+                <span class="login-brand">Portal Mekanik</span>
+                <h1 class="login-heading">Masuk</h1>
+                <p class="login-sub">Masukkan kredensial Anda untuk mengakses pusat komando Tambal Ban.</p>
+
+                
+
+                <form action="/api/login" method="POST" id="login-form">
+                    <div class="form-group">
+                        <label for="username">Alamat Email / ID Mekanik</label>
+                        <input
+                            type="text"
+                            id="username"
+                            name="username"
+                            placeholder="you@company.com"
+                            autocomplete="username"
+                            required
+                        >
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Kata Sandi (Kode Kunci Inggris)</label>
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="••••••••••••"
+                            autocomplete="current-password"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-meta">
+                        <a href="#" id="forgot-password-link">Lupa kata sandi?</a>
+                    </div>
+
+                    <!-- Hidden parameters -->
+                    <input type="hidden" name="role" value="admin">
+                    <input type="hidden" name="debug" value="true">
+
+                    <button type="submit" class="btn-accent btn-full" id="login-submit-btn">
+                        Masuk
+                    </button>
+                </form>
+
+                <div class="login-divider">
+                    <span>or</span>
+                </div>
+
+                <button class="sso-btn" id="sso-btn" type="button">
+                    Masuk dengan SSO (Sistem Spesialis Otomotif)
+                </button>
+
+                <p class="login-note">
+                    Dilindungi oleh Keamanan Karet Enterprise Tambal Ban Online.
+                    Seluruh akses dicatat dan diaudit oleh kepala bengkel.
+                    <a href="#" style="color: var(--gold); text-decoration: none;">Kebijakan Privasi</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    
+    
+    
+
+</body>
+</html>

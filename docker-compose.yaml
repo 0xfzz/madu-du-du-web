@@ -1,0 +1,18 @@
+services:
+  honeypot:
+    build: .
+    image: faiznrd/pui-honeypot:latest
+    container_name: pui-honeypot
+    ports:
+      - "8080:8080"
+    volumes:
+      - honeypot-logs:/app/logs
+    deploy:
+      resources:
+        limits:
+          memory: 64M
+    restart: unless-stopped
+
+volumes:
+  honeypot-logs:
+    driver: local

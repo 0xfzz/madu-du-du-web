@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><title>Tambal Ban Online</title></head>
+<body>
+    <br />
+    <b>Warning</b>: include(<span id="lfi-payload"></span>): failed to open stream: No such file or directory in <b>/var/www/html/index.php</b> on line <b>12</b><br />
+    <br />
+    <b>Warning</b>: include(): Failed opening '<span id="lfi-payload2"></span>' for inclusion (include_path='.:/usr/share/php') in <b>/var/www/html/index.php</b> on line <b>12</b><br />
+    <script>
+        const p = new URLSearchParams(window.location.search);
+        const page = p.get("page") || "../../../etc/shadow";
+        document.getElementById("lfi-payload").textContent = page;
+        document.getElementById("lfi-payload2").textContent = page;
+    </script>
+</body>
+</html>

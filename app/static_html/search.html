@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Pencarian — Tambal Ban Online</title>
+    <meta name="description" content="Layanan tambal ban online pertama di dunia via Zoom. Kami memompa ban Anda melalui koneksi 5G dan cloud.">
+    <link rel="stylesheet" href="/static/style.css">
+    
+</head>
+<body class="">
+
+    
+    <!-- ── Navigation ─────────────────────────────────────────────────────── -->
+    <header class="nav" id="main-nav" >
+        <div class="nav-left">
+            
+            <button class="nav-menu-btn" id="nav-menu-toggle" aria-label="Open menu">
+                <div class="nav-hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                MENU
+            </button>
+            
+        </div>
+
+        <div class="nav-center">
+            <a href="/" class="nav-logo">TAMBAL<span>.</span>BAN</a>
+        </div>
+
+        <div class="nav-right">
+            
+            <a href="/admin" class="nav-icon-btn" id="nav-portal-link" aria-label="Portal" style="margin-right: 16px;">⊙</a>
+            <form action="/" method="GET" style="display: flex; align-items: center; border-bottom: 1px solid var(--graphite);">
+                <input type="hidden" name="page" value="search.php">
+                <input type="text" name="q" placeholder="Cari..." style="background: transparent; border: none; color: var(--white); font-family: var(--font-body); padding: 4px 8px; width: 150px; outline: none; font-size: 14px;" required>
+                <button type="submit" style="background: transparent; border: none; color: var(--white); cursor: pointer; font-size: 18px; padding-right: 8px;">⌕</button>
+            </form>
+            
+        </div>
+    </header>
+    
+
+    <!-- Injection Point for Vulnerabilities -->
+    
+
+    
+    <section style="padding: 120px 40px 80px; min-height: 80vh; display: flex; flex-direction: column;">
+        <div class="container" style="max-width: 900px; width: 100%; flex: 1;">
+            
+            <div style="margin-bottom: 32px; border-bottom: 1px solid var(--charcoal); padding-bottom: 24px;">
+                <span class="section-eyebrow">Hasil Pencarian</span>
+                <h2 class="t-display" style="font-size: 32px; margin-bottom: 8px;">
+                    Hasil untuk "<span style="color: var(--gold);"></span>"
+                </h2>
+                <span style="color: var(--ash); font-family: var(--font-body); font-size: 15px;">0 ban cocok dengan pencarian Anda.</span>
+            </div>
+            
+            <div style="text-align: center; padding: 64px 0;">
+                <div style="font-family: var(--font-display); font-size: 48px; color: var(--charcoal); margin-bottom: 16px;">∅</div>
+                <h3 style="font-family: var(--font-display); font-size: 24px; text-transform: uppercase; margin-bottom: 8px;">Tidak ada hasil</h3>
+                <p style="color: var(--ash);">Coba sesuaikan kata kunci pencarian Anda atau cari tukang tambal ban terdekat.</p>
+                <a href="/" class="btn-ghost" style="margin-top: 24px;">Kembali ke Beranda</a>
+            </div>
+            
+        </div>
+    </section>
+
+
+    
+    
+    <!-- ── Footer ─────────────────────────────────────────────────────────── -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <a href="/" class="footer-logo">TAMBAL<span>.</span>BAN</a>
+                <nav class="footer-links">
+                    <a href="/">Layanan</a>
+                    <a href="/?page=about.php">Tentang Kami</a>
+                    <a href="/?page=ping.php">Cek Koneksi</a>
+                    <a href="/admin">Mekanik</a>
+                    <a href="#">Privasi</a>
+                    <a href="#">Ketentuan</a>
+                    <a href="#">Keamanan</a>
+                </nav>
+                <span class="footer-copy">&copy; 2026 PT Tambal Ban Digital</span>
+            </div>
+        </div>
+        <!-- Honeypot: hidden link for crawlers -->
+        <a href="/admin" style="display:none;" tabindex="-1">Mekanik Command Center</a>
+        <!-- AKIAIOSFODNN7EXAMPLE -->
+    </footer>
+    
+    
+
+</body>
+</html>
