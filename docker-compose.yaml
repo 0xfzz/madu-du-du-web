@@ -5,6 +5,7 @@ services:
     container_name: pui-honeypot
     ports:
       - "8080:8080"
+      - "2020:2020"
     volumes:
       - honeypot-logs:/app/logs
     deploy:
