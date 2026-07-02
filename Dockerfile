@@ -10,11 +10,12 @@ RUN apt-get update && apt-get install -y \
     gnupg \
     lsb-release \
     ca-certificates \
-    lighttpd \
+    lighttpd lighttpd-mod-magnet lua-cjson \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy configuration and static files
 COPY app/lighttpd.conf /etc/lighttpd/lighttpd.conf
+COPY app/headers.lua /etc/lighttpd/headers.lua
 COPY app/static_html/ /app/static_html/
 COPY app/static/ /app/static_html/static/
 COPY entrypoint.sh /entrypoint.sh
